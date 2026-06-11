@@ -123,7 +123,7 @@ if st.session_state.pagina_actual == "home":
         # PIE DE PÁGINA CORPORATIVO
         col_pie_izq, col_pie_der = st.columns(2)
         with col_pie_izq:
-            st.markdown("""<p style="color: #7A8B9E; font-family: Georgia, serif; font-size: 13px; margin: 0;">© tangydiplomat - Todos los derechos reservados 2026</p>""", unsafe_allow_html=True)
+            st.markdown("""<p style="color: #7A8B9E; font-family: Georgia, serif; font-size: 13px; margin: 0;">© LACR - Todos los derechos reservados 2026</p>""", unsafe_allow_html=True)
         with col_pie_der:
             st.markdown("""<p style="text-align: right; color: #FFFFFF; font-family: Georgia, serif; font-size: 15px; font-weight: bold; margin: 0;">Junio 2026</p>""", unsafe_allow_html=True)
 
