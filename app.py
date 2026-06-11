@@ -179,7 +179,7 @@ else:
             masa_torre = st.number_input("Masa estructural de la torre (kg)", min_value=100.0, value=8500.0, step=100.0)
             masa_pluma = st.number_input("Masa estructural de la pluma (kg)", min_value=100.0, value=3200.0, step=50.0)
             masa_contrapluma = st.number_input("Masa de la contrapluma (kg)", min_value=50.0, value=1100.0, step=50.0)
-            masa_lastre = st.number_input("Masa de los bloques de lastre superior (kg)", min_value=100.0, value=4500.0, step=100.0)
+            masa_lastre = st.number_input("Masa de los bloques de lastre superior (kg)", min_value=100.0, value=9700.0, step=100.0)
             distancia_lastre = st.number_input("Distancia del lastre al eje central (m)", min_value=0.5, value=10.5, step=0.1)
             area_expuesta = st.number_input("Área estructural expuesta al viento (m2)", min_value=0.5, value=14.5, step=0.5)
     
