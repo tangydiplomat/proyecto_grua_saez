@@ -272,3 +272,32 @@ else:
         else:
             csv_file = st.session_state.historial.to_csv(index=False).encode('utf-8')
             st.download_button(label="Descargar reporte integral en formato CSV", data=csv_file, file_name="auditoria_grua_saez.csv", mime="text/csv")
+
+# =========================================================================
+# INSTRUCCIONES PARA EJECUTAR
+#
+#           1. Requisitos previos
+#
+#	-Tener instalado Python (v3.14 o superior).
+#	-Tener pip instalado.
+#
+# Abra una terminal en VS Code y cree un entorno virtual:
+#	Windows: 
+#
+#               python -m venv venv
+#
+#	Active el entorno:
+#
+#               .\venv\Scripts\activate
+#
+#           2. Instalación
+# Desde la carpeta raíz del proyecto, instalar las dependencias:
+#
+#               pip install -r requirements.txt
+#
+#            3. Ejecución
+# Ejecuta la aplicación en el entorno local:
+#
+#               python -m streamlit run app.py
+#
+# (Se abrirá automáticamente en tu navegador en http://localhost:8501)
