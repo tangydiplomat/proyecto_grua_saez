@@ -131,6 +131,12 @@ if st.session_state.pagina_actual == "home":
 # VISTA 2: NÚCLEO DE LA CALCULADORA
 # =========================================================================
 else:
+
+    # --- VALORES TÉCNICOS SEGÚN FICHA (Sáez TL-50-5T) ---
+    VALOR_LASTRE_OFICIAL = 9700.0
+    VALOR_CONTRAPLUMA_OFICIAL = 1100.0
+    VALOR_PLUMA_OFICIAL = 3200.0
+
     st.markdown("""
     <style>
         .stApp {
@@ -176,12 +182,18 @@ else:
             
             st.markdown("---")
             st.markdown("**Masas de Componentes (kg):**")
+            
+            # Valores ingresados usando las constantes definidas arriba
             masa_torre = st.number_input("Masa estructural de la torre (kg)", min_value=100.0, value=8500.0, step=100.0)
-            masa_pluma = st.number_input("Masa estructural de la pluma (kg)", min_value=100.0, value=3200.0, step=50.0)
-            masa_contrapluma = st.number_input("Masa de la contrapluma (kg)", min_value=50.0, value=1100.0, step=50.0)
-            masa_lastre = st.number_input("Masa de los bloques de lastre superior (kg)", min_value=100.0, value=9700.0, step=100.0)
+            masa_pluma = st.number_input("Masa estructural de la pluma (kg)", min_value=100.0, value=VALOR_PLUMA_OFICIAL, step=50.0)
+            masa_contrapluma = st.number_input("Masa de la contrapluma (kg)", min_value=50.0, value=VALOR_CONTRAPLUMA_OFICIAL, step=50.0)
+            masa_lastre = st.number_input("Masa de los bloques de lastre superior (kg)", min_value=100.0, value=VALOR_LASTRE_OFICIAL, step=100.0)
             distancia_lastre = st.number_input("Distancia del lastre al eje central (m)", min_value=0.5, value=10.5, step=0.1)
             area_expuesta = st.number_input("Área estructural expuesta al viento (m2)", min_value=0.5, value=14.5, step=0.5)
+
+            # Lógica de advertencia: solo aparece si el usuario modifica los valores oficiales
+            if masa_lastre != VALOR_LASTRE_OFICIAL or masa_pluma != VALOR_PLUMA_OFICIAL or masa_contrapluma != VALOR_CONTRAPLUMA_OFICIAL:
+                st.warning("⚠️ **AVISO:** Estás operando con valores distintos a los de la ficha técnica oficial.")
     
             datos_entrada = {
                 "carga_suspendida": carga_suspendida, "radio_operacion": radio_operacion, 
@@ -301,3 +313,4 @@ else:
 #               python -m streamlit run app.py
 #
 # (Se abrirá automáticamente en tu navegador en http://localhost:8501)
+# =========================================================================
