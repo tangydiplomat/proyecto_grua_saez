@@ -111,7 +111,7 @@ if st.session_state.pagina_actual == "home":
                 <span class="sub-linea">Sáez TL-50-5T</span>
             </h1>
             <p style="color: #EFBF04; font-family: 'Georgia', serif; font-size: 28px; font-style: italic; margin-top: -10px; margin-bottom: 30px;">
-                Precisión técnica, seguridad total.
+                Precisión técnica, Seguridad total.
             </p>
         """, unsafe_allow_html=True)
         
