@@ -1,4 +1,5 @@
 # 🏗️ Calculadora de Riesgo Estructural: Sáez TL-50-5T
+*"Precisión técnica, seguridad total."*
 
 Esta es una herramienta de ingeniería diseñada para el análisis probabilístico y mecánico de la grúa torre **Sáez TL-50-5T**. El software permite a los operarios y encargados de seguridad evaluar, en tiempo real, la estabilidad de la maquinaria basándose en parámetros físicos reales y condiciones operativas.
 
